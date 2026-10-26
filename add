@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Павел Городничий — Senior L&D</title>
+    <style>
+        :root {
+            --bg-color: #F8F9FA;
+            --accent-color: #0D6EF1;
+            --text-color: #343A40;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        header {
+            background: var(--card-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 { margin-bottom: 0.5rem; color: var(--text-color); }
+        .subtitle { color: var(--accent-color); font-weight: 600; margin-bottom: 1.5rem; }
+        .contacts { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active { color: var(--accent-color); }
+        main { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem; }
+        section { margin-bottom: 3rem; }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .result-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .result-card h3 { color: var(--accent-color); margin-bottom: 0.5rem; }
+        .experience-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .company-name { font-weight: 700; color: var(--text-color); }
+        .position-date { color: var(--accent-color); font-weight: 500; }
+        .education-list, .training-list {
+            list-style: none;
+        }
+        .education-item, .training-item {
+            background: var(--card-bg);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--accent-color);
+        }
+        .year { color: var(--accent-color); font-weight: 700; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            header { padding: 1.5rem 1rem; }
+            nav { gap: 1rem; }
+            nav a { font-size: 0.9rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://2.downloader.disk.yandex.ru/preview/8e72e5434eff45b18f1fef26bfb2f89514174d2d84a9c3424ccb39d998308515/inf/zxdtnOiwzpn5b6hPLW7IMsaiG5mYXXlx6EclN81_Xp4AnGqRjqGt1ZRvjInjZsOEn0FlB221gjJPl3aJAuSZfw%3D%3D?uid=1102696159&filename=photo.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1102696159&tknv=v3&is_direct_zip_experiment=1&size=1897x826" alt="Павел Городничий" class="profile-photo">
+        <h1>Павел Городничий</h1>
+        <div class="subtitle">Senior L&D · Руководитель проектов обучения</div>
+        <div class="contacts">
+            Екатеринбург · удалённо или офис · готов к переезду<br>
+            +7 (912) 250-10-80 · p.gorodnichiy@yandex.ru · английский B1
+        </div>
+        <nav>
+            <a href="#about" class="active">Обо мне</a>
+            <a href="#skills">Ключевые навыки</a>
+            <a href="#results">Результаты</a>
+            <a href="#experience">Опыт работы</a>
+            <a href="#education">Образование</a>
+            <a href="#training">Профильное обучение</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>14 лет в обучении и развитии персонала: Т-Банк, Альфа-Банк, Почта Тех, IDS Borjomi, PepsiCo.<br>Проектирую обучение, которое меняет поведение сотрудников и улучшает метрики бизнеса.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Ключевые навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Разработка обучения</h3>
+                    <p>Исследование, выбор гипотезы, разработка концепта, определение метрик, тест, сбор ОС и метрик, доработка, масштабирование.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Эффективные форматы</h3>
+                    <p>Blended и microlearning, UGC, голосовые тренажеры, подкасты, сессии с экспертами, мероприятия с тренером.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Управление проектами</h3>
+                    <p>Создание и внедрение стандартов для Sales группы стран, программы с внешними провайдерами, команда до 18 человек.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Достижение метрик</h3>
+                    <p>Изменение поведения, влияние на бизнес-результат, время разработки, NPS, CSI, доходимость.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Развитие экспертизы</h3>
+                    <p>Создание экспертных сообществ, подготовка внутренних тренеров, наставничество.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Отрасли</h3>
+                    <p>Банковская сфера, IT, EdTech, FMCG</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Результаты</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Масштаб</h3>
+                    <p>Траектории для 3 200 операторов Т-Банка: CSI 4,7, NPS 78%, изменение поведения у 52%.<br> 23 траектории для 5 500 менеджеров Альфа-Банка c ключевыми рабочими задачами.</p>
+                </div>
+                <div class="result-card">
+                    <h3>Скорость</h3>
+                    <p>Время разработки 109 программ в «Академии продаж» Т-Банка сокращено на 48%. Создание курса любой сложности за 2 недели. AI ассистенты для ускорения разработки. </p>
+                </div>
+                <div class="result-card">
+                    <h3>Влияние на бизнес</h3>
+                    <p>Адаптация мерчендайзера за 3 дня вместо 10. Рост доли полки с 15 до 19%, сокращение ФОТ на 3%, сокращение расходов на преподавателей на 34%, рост конверсии на 13%.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Опыт работы</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">Т-Банк · банк, IT</span><br>
+                        <span class="position-date">Старший дизайнер образовательного опыта (3 года)</span>
+                    </div>
+                    <span class="position-date">2024–2026</span>
+                </div>
+                <ul>
+                    <li>Траектория для 3 200 операторов: удовлетворённость 4,7, NPS 78%, изменение поведения у 52%.</li>
+                    <li>«Академия продаж»: 48 продуктовых, 37 адаптационных, 24 программы по soft skills. Номинант премии Glory.</li>
+                    <li>Сокращение времени разработки обучения на 48% за счет универсализации контента и кастомных блоков направлений.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">Альфа-Банк · банк</span><br>
+                        <span class="position-date">Методолог, delivery-менеджер (1 год)</span>
+                    </div>
+                    <span class="position-date">2023–2024</span>
+                </div>
+                <ul>
+                    <li>Процесс создания курсов: от сбора отрибутов до масштабирования за 2 недели.</li>
+                    <li>«Новые форматы курсов»: сокращение времени обучения на 37%, рост VOE на 10%.</li>
+                    <li>23 траектории для 5 500 сотрудников.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">Почта Тех · IT-разработка</span><br>
+                        <span class="position-date">Руководитель направления IT-специалистов (1 год)</span>
+                    </div>
+                    <span class="position-date">2022–2023</span>
+                </div>
+                <ul>
+                    <li>5 программ по hard skills: CSI 8,5, COR 91%, NPS 56%, 17% горизонтальных и вертикальных перемещений.</li>
+                    <li>Экспертные сообщества на 547 сотрудников, 11 внутренних экспертов.</li>
+                    <li>Адаптационный трек для 7 ключевых ролей.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">SF Education · EdTech</span><br>
+                        <span class="position-date">Product owner (1 год)</span>
+                    </div>
+                    <span class="position-date">2021–2022</span>
+                </div>
+                <ul>
+                    <li>Перезапуск 12 программ для IT-разработчиков и бизнес-аналитиков.</li>
+                    <li>Новый формат поддержки: расходы на преподавателей −34%.</li>
+                    <li>Сокращение переносов занятий с 20% до 0%.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">СТАРТ АКАДЕМИЯ · онлайн-образование</span><br>
+                        <span class="position-date">Project manager, соавтор курса (9 мес.)</span>
+                    </div>
+                    <span class="position-date">2021</span>
+                </div>
+                <ul>
+                    <li>Курс «Менеджер по обучению»: blended, microlearning, доходимость 70%, NPS 85%.</li>
+                    <li>Воронки продаж, продающие вебинары, CustDev, УТП.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">IDS Borjomi · FMCG, напитки</span><br>
+                        <span class="position-date">L&D-менеджер, и. о. руководителя отдела (3 года)</span>
+                    </div>
+                    <span class="position-date">2018–2020</span>
+                </div>
+                <ul>
+                    <li>Запуск Рабочих Методов для Sales отдела = непрерывная диагностика навыков и автоматизация процесса обучения.</li>
+                    <li>«Адаптация мерчендайзера за 3 дня»: сокращение выхода на продуктивный уровень с 10 до 3 дней.</li>
+                    <li>«Электронный кошелёк»: доля полки +4%, ФОТ −3% (600 человек).</li>
+                    <li>Запуск СДО iSpring на территории Урала и Сибири.</li>
+                    <li>Программы «Переговоры», «Презентация», запуск обучающих роликов для стран СНГ.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">PepsiCo Россия · FMCG</span><br>
+                        <span class="position-date">Тренер по продажам (6 лет)</span>
+                    </div>
+                    <span class="position-date">2012–2018</span>
+                </div>
+                <ul>
+                    <li>Обучение и аттестация 123 сотрудников на статусы «Мастер» и «Стандарт».</li>
+                    <li>Зона: Екатеринбург, Свердловская область, Курган, Тюмень.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="company-name">Логика молока · FMCG, молочная продукция</span><br>
+                        <span class="position-date">Супервайзер отдела прямых продаж (1,5 года)</span>
+                    </div>
+                    <span class="position-date">2011–2012</span>
+                </div>
+                <ul>
+                    <li>Команда 18 человек; текучесть снижена с 40% до 5%.</li>
+                    <li>Выполнение KPI в среднем 101%, диплом «Лидер продаж 2011».</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Образование</h2>
+            <ul class="education-list">
+                <li class="education-item">
+                    <div class="year">2005</div>
+                    <div><strong>Уральский государственный университет путей сообщения</strong></div>
+                    <div>Экономический факультет, высшее образование</div>
+                </li>
+                <li class="education-item">
+                    <div class="year">Английский язык</div>
+                    <div>Уровень B1</div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="training">
+            <h2>Профильное обучение</h2>
+            <ul class="training-list">
+                <li class="training-item">
+                    <div class="year">2025</div>
+                    <div><strong>Валидные тесты</strong> · Т-Банк</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2024</div>
+                    <div><strong>4CID</strong> · Т-Банк</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2024</div>
+                    <div><strong>Agile и Scrum</strong> · ScrumTrek</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2023</div>
+                    <div><strong>Промпт-инжиниринг</strong> · Dbrain</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2023</div>
+                    <div><strong>Шаблоны убойных презентаций</strong> · BONNIE&SLIDE</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2022</div>
+                    <div><strong>Юнит-экономика</strong> · Алексей Добрусин</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2019</div>
+                    <div><strong>Технология ассесмент-центра</strong> · Мария Романова (ex-ЭКОПСИ)</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2019</div>
+                    <div><strong>Coaching and Team Management</strong> · ICU</div>
+                </li>
+                <li class="training-item">
+                    <div class="year">2014–2018</div>
+                    <div><strong>Тренинг для тренеров</strong>: переговоры, продажи, подбор персонала, стили руководства (PepsiCo, IDS Borjomi)</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Павел Городничий.</p>
+    </footer>
+</body>
+</html>
